@@ -1,0 +1,86 @@
+.container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 5px;
+}
+
+.inputField {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   background-color: blue;
+   width: 450px;
+   height: 30px;
+
+   input {
+      flex: 1;
+      height: 30px;
+      border: none;
+      padding: 5px;
+      transition: box-shadow 0.3s;
+      &:focus {
+         border: inset 3px blue solid;
+         outline: none;
+         box-shadow: inset 0 0 0 2px red;
+      }
+   }
+
+   button {
+      width: 20%;
+      background-color: greenyellow;
+      border: none;
+      height: 30px;
+      &:active {
+         scale: 0.95;
+      }
+   }
+}
+
+.tasks {
+   width: 450px;
+
+   .task {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 15px 10px;
+      margin-block: 10px;
+
+      background-color: rgb(75, 75, 75);
+
+      width: 100%;
+      border: 2px solid grey;
+
+      .buttons {
+         button {
+            border: none;
+            background-color: rgba(255, 255, 255, 0.192);
+            margin-left: 5px;
+            padding: 5px;
+
+            height: 40px;
+
+            font-size: 16px;
+            font-weight: 500;
+
+            border: 1px solid white;
+
+            &:active {
+               scale: 0.95;
+            }
+         }
+
+         .removeBtn {
+            background-color: red;
+            color: white;
+
+            padding: 5px;
+            font-family: inherit;
+            border: none;
+         }
+      }
+   }
+}
